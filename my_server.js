@@ -8,8 +8,8 @@ var app = express();
 app.get('/', function(req, res){
 res.sendfile(__dirname + '/public/mipagina.html');
 });
-app.get('/about', function(req, res){
-res.sendfile(__dirname + '/public/mipagina.html');
+app.get('/css', function(req, res){
+res.sendfile(__dirname + '/public/css/estilo.css');
 });
 
 // escuchar puerto 8080
