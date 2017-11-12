@@ -5,7 +5,7 @@ var express = require('express');
 var app = express();
 
 //archivos estáticos (css,js,...)
-app.use('/', express.static(path.join(__dirname, '/public')))
+app.use('/', express.static('/public/css/estilo.css'))
 
 // ruteo
 app.get('/', function(req, res){
