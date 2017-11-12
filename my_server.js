@@ -5,11 +5,11 @@ var express = require('express');
 var app = express();
 
 //archivos estáticos (css,js,...)
-app.use('/', express.static('/public'))
+app.use('/', express.static(path.join(__dirname, 'public')))
 
 // ruteo
 app.get('/', function(req, res){
-res.sendfile(__dirname + '/public/mipagina.html');
+res.sendfile(__dirname + 'public/mipagina.html');
 });
 
 // escuchar puerto 8080
