@@ -1,0 +1,16 @@
+{
+  "name" : "my_server",
+  "version" : "0.1.0",
+  "main" : "my_server.js",
+  "scripts" : {
+    "start" : "node my_server.js"
+  },
+  "engines": {
+    "node": "0.8.15"
+ },
+"dependencies": {
+  "express": "3.x",
+  "socket.io": "0.9.x",
+  "underscore": "1.4.3"
+  }
+}
