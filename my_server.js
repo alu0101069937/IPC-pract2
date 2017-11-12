@@ -4,6 +4,9 @@ var express = require('express');
 // instanciar
 var app = express();
 
+//archivos estáticos (css,js,...)
+app.use(express.static('public'))
+
 // ruteo
 app.get('/', function(req, res){
 res.sendfile(__dirname + '/public/mipagina.html');
