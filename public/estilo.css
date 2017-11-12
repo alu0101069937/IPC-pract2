@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300');
+@import url('https://fonts.googleapis.com/css?family=Heebo:400,900');
+  
+h1{
+  color: #FFF;
+  font-family: "Heebo:900";
+  background: #7a3b7a;   
+  text-align: center;  
+}
+h2{
+  color: #FFF;
+  font-family: "Heebo:400";
+  text-align: center;
+}
+.login-page {
+  width: 650px;
+  margin: auto;
+}
+.form {
+  opacity: 0.8;
+  background: #FFF;
+  max-width: 360px;
+  margin: 0 auto 100px;
+  padding: 25px;
+  text-align: center;
+  font-family: 'Roboto';
+}
+.form input {
+  background: #f2f2f2;
+  width: 100%;
+  margin: 0 0 15px;
+  padding: 10px;
+  box-sizing: border-box;
+  font-size: 13px;
+}
+.form input[type="radio"] {
+  width: 5%;
+}
+.form textarea {
+  font-family: 'Roboto';
+  background: #f2f2f2;
+  width: 100%;
+  border: 50;
+  margin: 0 0 15px;
+  padding: 10px;
+  box-sizing: border-box;
+  font-size: 13px;
+}
+.form button {
+  background: #4CAF50;
+  width: 50%;
+  padding: 10px;
+  color: #FFFFFF;
+  font-size: 14px;
+  cursor: pointer;
+}
+.form .message {
+  font-size: 17px;
+  font-weight: bold;
+  font-family: "Heebo:400";
+}
+body {
+  background: url('https://www.sciencenewsforstudents.org/sites/default/files/2017/05/main/blogposts/860_main_library_bacteria.png') center center no-repeat;
+  background-size: cover;
+}
