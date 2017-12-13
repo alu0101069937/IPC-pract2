@@ -4,15 +4,16 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title>BiblioComp -comparte tus libros-</title>
     <link rel="stylesheet" type="text/css" href="css/estilo.css"/>
+    <link rel="javascript" type="text/javascript" href="js/codejavascript.js">
   </head>
   <body>
     <div class="login-page">
       <h1>BIBLIOCOM</h1>
       <h2>Amplía la biblioteca de la ULL compartiendo tus libros.<br>Regístrate!</h2>  
       <form class="form">
-        <input type="text" placeholder="Nombre y Apellidos"/>
-        <input type="text" placeholder="Contraseña [mín 6 caracteres]"/>
-        <input type="text" placeholder="email@..."/>
+        <input type="text" placeholder="Nombre y Apellidos" required/>
+        <input type="text" placeholder="Contraseña [mín 6 caracteres]" required/>
+        <input id="email" type="text" placeholder="email@..." onblur="validarEmail(this.value);"/>
         <p class="message">¿Cómo conociste este servicio?</p>
         <div>
           <input type="radio" name="medio" value="prensa">Prensa escrita
@@ -20,8 +21,7 @@
           <input type="radio" name="medio" value="internet">Internet
           <input type="radio" name="medio" value="otros">Otros
         </div>
-        <textarea name="textoArea" placeholder="Escribe lo que quieres que el resto de lectores sepan de tí: gustos, aficiones, estudios, lecturas...">
-        </textarea>
+        <textarea name="textoArea" placeholder="Escribe lo que quieres que el resto de lectores sepan de tí: gustos, aficiones, estudios, lecturas..."></textarea>
         <button>NUEVA CUENTA</button>
         <p class="message">¿Ya tienes cuenta? <a href="#">Pincha aquí</a></p>
       </form>
