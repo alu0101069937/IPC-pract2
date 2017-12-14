@@ -11,9 +11,6 @@ app.use(express.static(__dirname + '/public'))
 app.get('/', function(req, res){
 res.sendfile(__dirname + '/public/mipagina.html');
 });
-app.get('/', function(req, res){
-res.sendfile(__dirname + '/public/pagina2.php');
-});
 
 // escuchar puerto 8080
 app.listen(8080);
