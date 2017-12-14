@@ -7,7 +7,7 @@
 	  <table border="5" style="margin: 0 auto;">
 <?php 
     $nombre = $_GET["nombre"];
-    $passwd = $_GET["passwd"];
+    $usuario = $_GET["usuario"];
     $email = $_GET["email"];
     $medio = $_GET["medio"];
     $textoArea = $_GET["textoArea"];
@@ -16,8 +16,8 @@
 			<td>$nombre</td>
 		</tr>
 		<tr>
-			<td>Contraseña:</td>
-			<td>$passwd</td>
+			<td>Usuario:</td>
+			<td>$usuario</td>
 		</tr>
 		<tr>
 			<td>E-mail:</td>
