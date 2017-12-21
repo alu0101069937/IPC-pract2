@@ -5,9 +5,12 @@
     <title>BiblioComp -comparte tus libros-</title>
     <link rel="stylesheet" type="text/css" href="css/estilo.css"/>
     <script language="JavaScript" src="js/codejavascript.js"></script>
+    <script
+       src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.min.js"><!--AngularJs-->
+    </script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
   </head>
-  <body>
+  <body ng-app="myApp"><!--Angular-->
     <nav class="navbar">
       <ul class="nav nav-tabs">
         <li class="nav-item">
@@ -28,10 +31,12 @@
     <div class="login-page"><br>
       <h1 class="text-white">BIBLIOCOM</h1>
       <h3 class="text-white">Amplía la biblioteca de la ULL compartiendo tus libros. Regístrate!</h3>
-      <form class="form" action="pagina2.php" method="get">
-        <input type="text" placeholder="*Nombre y Apellidos" required/>
-        <input type="text" placeholder="*Nombre de usuario [de la ULL]" required/>
-        <input id="email" type="text" placeholder="*email@..." onblur="validarEmail(this.value);" required/>
+      <form class="form" action="#" method="get">
+        
+       <div ng-controller="contenedor"><!--Angular-->
+        <input type="text" ng-model="name" placeholder="*Nombre y Apellidos" required/><!---->
+        <input type="text" ng-model="usuario" placeholder="*Nombre de usuario [de la ULL]" required/><!---->
+        <input id="email" type="text" ng-model="email" placeholder="*email@..." onblur="validarEmail(this.value);" required/><!---->
         <p class="message">¿Cómo conociste este servicio?</p>
         <div>
           <input type="radio" name="medio" value="prensa">Prensa escrita
@@ -42,10 +47,22 @@
         <textarea name="textoArea" placeholder="Escribe lo que quieres que el resto de lectores sepan de tí: gustos, aficiones, estudios, lecturas..."></textarea>
         <button value="nuevaCuenta" type="submit">NUEVA CUENTA</button>
         <p class="message">¿Ya tienes cuenta? <a href="#">Pincha aquí</a></p>
+      <!--Mostra datos formulario con Angular-->
+        <p>===================</p>
+        Nombre y Apellidos: {{name}}<br>
+        Usuario de la ULL: {{usuario}}<br>
+        Email: {{email}}
+        <script type="text/javascript">
+          angular.module('myApp', [])
+          .controller('contenedor',function($scope) 
+          {
+          });
+        </script>
+       </div>          
       </form>
     </div>
-   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+   <!--script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
-   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script-->
   </body>
 </html>
